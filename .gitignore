@@ -1,0 +1,20 @@
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+/.idea/
+/potentialRes/
+
+.godot/editor/
+.godot/uid_cache.bin
+
+*.tmp
+
+.godot/imported/
+/.godot/shader_cache
+
+scenes/Menu/main_menu.tscn
+
+.godot/

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://coi4psixmq5bd"]
+
+[ext_resource type="Texture2D" uid="uid://de1nweb8b2g5i" path="res://assets/Objects/Dump/3 Objects/2 Rubbish bag/4.png" id="1_2ny63"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onjcw"]
+size = Vector2(14, 9.5)
+
+[node name="trash4" type="AnimatableBody2D"]
+collision_layer = 31
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_2ny63")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.75)
+shape = SubResource("RectangleShape2D_onjcw")

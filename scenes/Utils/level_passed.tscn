@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxcpxkbh0nxew"]
+
+[ext_resource type="Script" path="res://scripts/level_passed.gd" id="1_w2vu8"]
+[ext_resource type="Texture2D" uid="uid://cgluyxamg7h63" path="res://assets/UI/checkerboard.png" id="2_lnqsq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj8we"]
+size = Vector2(36, 106)
+
+[node name="LevelPassed" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_w2vu8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, -43)
+shape = SubResource("RectangleShape2D_rj8we")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.25, -78.6508)
+scale = Vector2(0.0493056, 0.0491688)
+texture = ExtResource("2_lnqsq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(8.25, -43)
+scale = Vector2(0.0493056, 0.0491688)
+texture = ExtResource("2_lnqsq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(8.25, -8)
+scale = Vector2(0.0493056, 0.0491688)
+texture = ExtResource("2_lnqsq")

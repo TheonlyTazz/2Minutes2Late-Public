@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://gv7dkeu7od4y"]
+
+[ext_resource type="Script" path="res://scripts/pill.gd" id="1_g6t1y"]
+[ext_resource type="Texture2D" uid="uid://c8t71huewqqqw" path="res://assets/Items/items.png" id="2_pvowa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2fba"]
+size = Vector2(24, 28)
+
+[node name="Ammunition" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+collision_mask = 2
+script = ExtResource("1_g6t1y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pvowa")
+region_enabled = true
+region_rect = Rect2(37.0921, 1.78297, 21.9992, 28.3909)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u2fba")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

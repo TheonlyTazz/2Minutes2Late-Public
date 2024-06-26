@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvbnsw1awyyf"]
+
+[ext_resource type="Texture2D" uid="uid://c73acq32650x8" path="res://assets/Objects/Market/3 Objects/Terrace/4.png" id="1_c705u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11xrk"]
+size = Vector2(14, 24)
+
+[node name="Chair" type="AnimatableBody2D"]
+collision_layer = 31
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_c705u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_11xrk")

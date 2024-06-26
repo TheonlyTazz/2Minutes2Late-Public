@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://80doox0po4ft"]
+
+[ext_resource type="Texture2D" uid="uid://dv5th2gv4kxub" path="res://assets/UI/backgrounds/city-backgrounds-pixel-art/Backgrounds/1/Day/1.png" id="1_q5kni"]
+[ext_resource type="Texture2D" uid="uid://10fsry4iwqei" path="res://assets/UI/backgrounds/city-backgrounds-pixel-art/Backgrounds/1/Day/2.png" id="2_77d4d"]
+[ext_resource type="Texture2D" uid="uid://op78ik0lundc" path="res://assets/UI/backgrounds/city-backgrounds-pixel-art/Backgrounds/1/Day/3.png" id="3_mux7h"]
+[ext_resource type="Texture2D" uid="uid://5y6t7qtfsg3m" path="res://assets/UI/backgrounds/city-backgrounds-pixel-art/Backgrounds/1/Day/4.png" id="4_071k0"]
+[ext_resource type="Texture2D" uid="uid://io8plpl7h8tg" path="res://assets/UI/backgrounds/city-backgrounds-pixel-art/Backgrounds/1/Day/5.png" id="5_neu74"]
+
+[sub_resource type="GDScript" id="GDScript_f7b5r"]
+script/source = "extends ParallaxBackground
+
+enum TIME{DAY,	NIGHT}
+@export var time:TIME = TIME.DAY
+enum BACKGROUND {ONE=1,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT}
+@export var backgroundType: BACKGROUND = 1
+var state = \"Day\"
+var background = 1
+
+func _ready():
+	if(time == TIME.NIGHT):
+		state = \"Night\";
+	if(backgroundType != BACKGROUND.ONE):
+		background = backgroundType
+	var i = 2
+	for child in get_children():
+
+		if(child is ParallaxLayer):
+			var sprite2D: Sprite2D = child.get_child(0)
+			sprite2D.texture = load(\"res://assets/UI/backgrounds/city-backgrounds-pixel-art/Backgrounds/\" + str(background) + \"/\"+state+\"/\"+str(i)+\".png\")
+			i += 1
+		else:
+			child.texture = load(\"res://assets/UI/backgrounds/city-backgrounds-pixel-art/Backgrounds/\" + str(background) + \"/\"+state+\"/1.png\")
+			
+"
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = SubResource("GDScript_f7b5r")
+time = 1
+backgroundType = 8
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_q5kni")
+centered = false
+
+[node name="Layer 1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer 1"]
+position = Vector2(0, 325)
+texture = ExtResource("2_77d4d")
+centered = false
+
+[node name="Layer 2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer 2"]
+position = Vector2(0, 325)
+texture = ExtResource("3_mux7h")
+centered = false
+
+[node name="Layer 3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer 3"]
+position = Vector2(0, 325)
+texture = ExtResource("4_071k0")
+centered = false
+
+[node name="Layer 4" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer 4"]
+position = Vector2(0, 325)
+texture = ExtResource("5_neu74")
+centered = false

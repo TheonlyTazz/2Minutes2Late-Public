@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2faevtdc8pjr"]
+
+[ext_resource type="Texture2D" uid="uid://buj162e1hwbfj" path="res://assets/Tiles/market_street.png" id="1_mnhoo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kuwpe"]
+size = Vector2(95, 8)
+
+[node name="Platform" type="AnimatableBody2D"]
+collision_mask = 17
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mnhoo")
+region_enabled = true
+region_rect = Rect2(192.628, 95.9045, 95.5761, 7.861)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_kuwpe")
+one_way_collision = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4x44i1m4q2c2"]
+
+[ext_resource type="Texture2D" uid="uid://kqolmgkegvxb" path="res://assets/Objects/Dump/3 Objects/1 Cars/2.png" id="1_ghr42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11xrk"]
+size = Vector2(46, 31)
+
+[node name="car4" type="AnimatableBody2D"]
+collision_layer = 31
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_ghr42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_11xrk")

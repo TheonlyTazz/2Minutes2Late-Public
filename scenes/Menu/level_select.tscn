@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnkoqcugfegb7"]
+
+[ext_resource type="Texture2D" uid="uid://chq1c5cg65xj4" path="res://assets/UI/background_menu.png" id="1_a5mhl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak7fs"]
+atlas = ExtResource("1_a5mhl")
+region = Rect2(0, 0, 688, 888)
+
+[node name="Level Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_ak7fs")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.99479
+anchor_bottom = 1.99383
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 185
+
+[node name="Seperator" type="Control" parent="Background/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Seperator" type="Control" parent="Background/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Background/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Level 1"

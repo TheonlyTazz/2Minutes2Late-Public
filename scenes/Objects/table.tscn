@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://llhtpvc2m465"]
+
+[ext_resource type="Texture2D" uid="uid://mk7dsnsfqypn" path="res://assets/Objects/Market/3 Objects/Terrace/1.png" id="1_t7yfr"]
+
+[node name="Table" type="AnimatableBody2D"]
+collision_layer = 31
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_t7yfr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(15, -10, 14, 12, -16, 12, -17, -10)

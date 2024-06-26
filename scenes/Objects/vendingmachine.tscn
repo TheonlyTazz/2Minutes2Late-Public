@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx3uef4y7eey8"]
+
+[ext_resource type="Texture2D" uid="uid://bgbnjawx1v4nm" path="res://assets/Objects/Market/3 Objects/Vending machines/1.png" id="1_as2gd"]
+
+[node name="Vending Machine" type="AnimatableBody2D"]
+collision_layer = 31
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_as2gd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-65, -28, 62, -28, 62, -21, 62, 27, -49, 27, -52, 24, -52, 16, -45, 9, -45, -20, -65, -20)

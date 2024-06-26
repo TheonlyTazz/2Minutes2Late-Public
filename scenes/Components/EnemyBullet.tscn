@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5gma4nolhjsx"]
+
+[ext_resource type="Script" path="res://scripts/Components/Bullet.gd" id="1_qdsfi"]
+[ext_resource type="Texture2D" uid="uid://cxxe0cl4a7yvk" path="res://assets/GunsPlayer/5 Bullets/3.png" id="2_t7kgl"]
+[ext_resource type="PackedScene" uid="uid://csgx2hix6j4t1" path="res://scenes/Components/attack_component.tscn" id="3_8ykyq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oa35g"]
+radius = 2.0
+
+[node name="Bullet" type="Node2D"]
+visibility_layer = 4
+script = ExtResource("1_qdsfi")
+damage = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+top_level = true
+z_index = 4096
+texture = ExtResource("2_t7kgl")
+
+[node name="attack_component" parent="." instance=ExtResource("3_8ykyq")]
+visibility_layer = 4
+collision_layer = 0
+collision_mask = 0
+priority = 1
+damage = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_component"]
+shape = SubResource("CircleShape2D_oa35g")
+debug_color = Color(0.9, 0, 0.0149998, 0.419608)
+
+[connection signal="body_entered" from="attack_component" to="." method="_on_attack_component_body_entered"]
