@@ -30,7 +30,7 @@ Ein 2D JumpNRun Spielprojekt
 
 ## Diagramme
 
-[Whimsical](https://whimsical.com/join/QqDsnJ71guocMFBpUJkUfX?invite=za3a2o7o)
+[Whimsical](https://whimsical.com/spiel-start-Q1RNQ15XW5sFKYyvjTE7hp)
 
 ## Lizenz
 
