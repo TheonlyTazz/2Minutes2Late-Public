@@ -28,6 +28,10 @@ Ein 2D JumpNRun Spielprojekt
 
 [Pflichtenheft](./Gruppe%2069%20-%202minutes%202%20late%20Pflichtenheft.pdf)
 
+## Diagramme
+
+[Whimsical](https://whimsical.com/join/QqDsnJ71guocMFBpUJkUfX?invite=za3a2o7o)
+
 ## Lizenz
 
 [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)
